@@ -50,13 +50,18 @@ public class Main {
                             writeAndReadFile.writeFile("C:\\Users\\hongh\\IdeaProjects\\quan_ly_danh_ba\\src\\data\\directory.csv",managePerson.list);
                             System.out.println("Đã ghi xong.");
                             break;
+                        case 8:
+                            System.out.print("Nhập số điện thoại gần đúng : ");
+                            String p = sc.nextLine();
+                            managePerson.findByPhoneNumber(p);
+                            break;
                         case 0:
                             System.exit(0);
                         default:
-                            System.out.println("Yêu cầu nhập lại 0 > 7: ");
+                            System.out.println("Yêu cầu nhập lại 0 > 8: ");
                     }
-                } catch (InputMismatchException e){
-                    System.out.println("Nhập lại 0 > 7 ");
+                } catch (Exception e){
+                    System.out.println("Nhập lại 0 > 8 ");
                 }
             } while (choice != 0);
         }

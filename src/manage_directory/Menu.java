@@ -13,6 +13,7 @@ public class Menu {
             5. Tìm kiếm
             6. Đọc từ file
             7. Ghi vào file
+            8. Tìm gần đúng theo SĐT
             0. Thoát
             Chọn chức năng: 
             """);

@@ -8,10 +8,10 @@ public class ManagePerson implements Manage<Person>{
     List<Person> list = new ArrayList<>();
     Person p = new Person();
 
-    public ManagePerson() throws FileNotFoundException {
-//        list.add(new Person("Kiên","0123456654","Bạn Học", "Nam", "Thái Nguyên","kien@gmail.com","23/4/1998"));
-//        list.add(new Person("Huy","0187458992","Bạn Học", "Nam", "Hà Nội","khun@gmail.com","13/5/1997"));
-//        list.add(new Person("Hùng","0127258393","Bạn Học", "Nam", "Thanh Hóa","sgn@gmail.com","25/3/1992"));
+    public ManagePerson() {
+        list.add(new Person("Kiên","0123456654","Bạn Học", "Nam", "Thái Nguyên","kien@gmail.com","23/4/1998"));
+        list.add(new Person("Huy","0187458992","Bạn Học", "Nam", "Hà Nội","khun@gmail.com","13/5/1997"));
+        list.add(new Person("Hùng","0127258393","Bạn Học", "Nam", "Thanh Hóa","sgn@gmail.com","25/3/1992"));
     }
 
     @Override
@@ -38,6 +38,20 @@ public class ManagePerson implements Manage<Person>{
             System.out.println("Không tồn tại " + name);
         }
     }
+
+    public void findByPhoneNumber(String phoneNumber){
+        int count = 0;
+        for (Person p : list) {
+            if (p.getPhoneNumber().contains(phoneNumber)){
+                count++;
+                System.out.println(p);
+            }
+        }
+        if (count == 0){
+            System.out.println("Không tìm thấy!!!");
+        }
+    }
+
     @Override
     public void edit(String name) {
         if (findByName(name) != -1){
