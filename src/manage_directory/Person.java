@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Person {
     private String name;
-    private long phoneNumber;
+    private String phoneNumber;
     private String group;
     private String gender;
     private String address;
@@ -15,7 +15,7 @@ public class Person {
     public Person() {
     }
 
-    public Person(String name, long phoneNumber, String group, String gender, String address, String email, String dateOfBirth) {
+    public Person(String name, String phoneNumber, String group, String gender, String address, String email, String dateOfBirth) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.group = group;
@@ -34,11 +34,11 @@ public class Person {
         this.name = name;
     }
 
-    public long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -88,7 +88,7 @@ public class Person {
         System.out.print("Nhập Họ tên: ");
         String name = sc.nextLine();
         System.out.print("Nhập Số điện thoại: ");
-        int phoneNumber = Integer.parseInt(sc.nextLine());
+        String  phoneNumber = sc.nextLine();
         System.out.print("Nhập Nhóm: ");
         String group = sc.nextLine();
         System.out.print("Nhập Giới tính: ");
@@ -105,13 +105,13 @@ public class Person {
     @Override
     public String toString() {
         return "Person{"
-                + name + ", " + '\''
-                + phoneNumber +", " +  '\''
-                + group +", " +  '\''
-                + gender +", " +  '\''
-                + address +", " +  '\''
-                + email +", " +  '\''
-                + dateOfBirth +'\'' +
+                + name + ", "
+                + phoneNumber +", "
+                + group +", "
+                + gender +", "
+                + address +", "
+                + email +", "
+                + dateOfBirth+
                 '}';
     }
 }
